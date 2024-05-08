@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        input{
+            margin-bottom: 20px;
+        }
+        button{
+
+            height: 30px;
+            border: none;
+            background-color: rgb(15, 100, 1);
+            color: #fff;
+            margin-left: 158px;
+            margin-bottom: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+   <div>
+    <div>
+        <label for="">Color</label>
+        <input type="text" id="color1">
+    </div>
+    <div>
+        <button onclick="change1()">Change</button>
+    </div>
+    <div id="container1" ></div>
+   </div>
+
+   <div>
+    <div>
+        <label for="">Color</label>
+        <input type="text" id="color2">
+    </div>
+    <div>
+        <button onclick="change2()">Change</button>
+    </div>
+    <div id="container2" ></div>
+   </div>
+
+   <div>
+    <div>
+        <label for="">Color</label>
+        <input type="text" id="color3">
+    </div>
+    <div>
+        <button onclick="change3()">Change</button>
+    </div>
+    <div id="container3" ></div>
+   </div>
+</body>
+<script>
+    function change1(){
+        var divElement = document.createElement('div')
+        divElement.style.width = '230px'
+        divElement.style.height = '230px'
+        
+        divElement.style.backgroundColor = document.getElementById('color1').value 
+
+        document.getElementById('container1').appendChild(divElement)
+    }
+
+    function change2(){
+        var divElement = document.createElement('div')
+        divElement.style.width = '230px'
+        divElement.style.height = '230px'
+        
+        divElement.style.backgroundColor = document.getElementById('color2').value 
+
+        document.getElementById('container2').appendChild(divElement)
+    }
+
+    function change3(){
+        var divElement = document.createElement('div')
+        divElement.style.width = '230px'
+        divElement.style.height = '230px'
+        
+        divElement.style.backgroundColor = document.getElementById('color3').value 
+
+        document.getElementById('container3').appendChild(divElement)
+    }
+</script>
+</html>
