@@ -11,26 +11,27 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: bisque;
+            
         }
 
         .container {
             width: 600px;
             height: 600px;
             border: 1px solid black;
+            background-color: bisque;
 
         }
 
         .box {
             margin-top: 40px;
+            margin-left: 50px;          
 
         }
 
         textarea {
             width: 500px;
             height: 200px;
-            margin-top: 10px;
-            margin-left: 50px;
+            margin-top: 10px;        
         }
 
         button {
@@ -40,11 +41,16 @@
             color: #fff;
             margin-left: 470px;
             margin-top: 20px;
-        }
+        }        
 
-        label {
+        .title{
+            width: 500px;
+            height: 50px;
+            margin-top: 20px;
             margin-left: 50px;
+            
         }
+       
     </style>
 </head>
 
@@ -57,15 +63,15 @@
         <div>
             <button onclick="analysis()">ANALİZ YAP</button>
         </div>
-        <div>
-            <label for="">Karakter Sayısı :</label>
+        <div class="title">
+            <label  for="">Karakter Sayısı :</label>
             <label for="" id="character"></label>
         </div>
-        <div>
+        <div class="title">
             <label for="">Kelime Sayısı :</label>
             <label for="" id="word"></label>
         </div>
-        <div>
+        <div class="title">
             <label for="">Cümle Sayısı :</label>
             <label for="" id="sentence"></label>
         </div>
