@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: bisque;
+        }
+
+        .container {
+            width: 600px;
+            height: 600px;
+            border: 1px solid black;
+
+        }
+
+        .box {
+            margin-top: 40px;
+
+        }
+
+        textarea {
+            width: 500px;
+            height: 200px;
+            margin-top: 10px;
+            margin-left: 50px;
+        }
+
+        button {
+            height: 30px;
+            border: none;
+            background-color: rgb(15, 100, 1);
+            color: #fff;
+            margin-left: 470px;
+            margin-top: 20px;
+        }
+
+        label {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <label for="">METİN GİRİNİZ :</label>
+            <textarea name="text" id="text"></textarea>
+        </div>
+        <div>
+            <button onclick="analysis()">ANALİZ YAP</button>
+        </div>
+        <div>
+            <label for="">Karakter Sayısı :</label>
+            <label for="" id="character"></label>
+        </div>
+        <div>
+            <label for="">Kelime Sayısı :</label>
+            <label for="" id="word"></label>
+        </div>
+        <div>
+            <label for="">Cümle Sayısı :</label>
+            <label for="" id="sentence"></label>
+        </div>
+    </div>
+</body>
+<script>
+    function analysis() {
+        var text = document.getElementById('text').value
+        var character = 0
+        var word = 0
+        var sentence = 0
+
+        character = text.length
+
+        for (i = 0; i < text.length; i++) {           
+            if (text[i] == " ") {
+                word++               
+            }
+            if (text[i] == ".") {
+                sentence++                
+            }
+        }
+
+        word++
+        
+        var characterResult = document.getElementById('character')
+        characterResult.innerHTML = character
+
+        var wordResult = document.getElementById('word')
+        wordResult.innerHTML = word
+
+        var sentenceResult = document.getElementById('sentence')
+        sentenceResult.innerHTML = sentence
+    }
+
+</script>
+
+</html>
